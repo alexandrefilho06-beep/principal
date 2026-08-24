@@ -10,98 +10,192 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #eeeeee;
-            text-align: center;
+            background: #eee;
+            color: #222;
         }
 
         header {
-            background: #009c3b;
+            background: linear-gradient(135deg, #009c3b, #006b29);
             color: white;
-            padding: 30px;
+            text-align: center;
+            padding: 40px 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 40px;
+            font-size: 42px;
+        }
+
+        nav {
+            background: #002776;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffdf00;
         }
 
         main {
-            background: white;
-            width: 80%;
-            max-width: 700px;
+            width: 90%;
+            max-width: 900px;
             margin: 30px auto;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 25px;
             padding: 25px;
             border-radius: 15px;
+            box-shadow: 0 5px 18px #0002;
         }
 
         h2 {
             color: #009c3b;
+            text-align: center;
         }
 
         p {
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.6;
         }
 
+        .foto {
+            width: 250px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #0004;
+        }
+
         .caixa {
-            background: #ffdf00;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 10px;
+            background: linear-gradient(135deg, #ffdf00, #f5c900);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        .caixa h2 {
+            color: #002776;
+        }
+
+        .botao {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #009c3b;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 4px 12px #0005;
         }
 
         footer {
             background: #002776;
             color: white;
+            text-align: center;
             padding: 20px;
+        }
+
+        /* Celular */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .foto {
+                width: 220px;
+            }
         }
     </style>
 </head>
 
-<body>
+<body id="topo">
 
     <header>
         <h1>⚽ Neymar Jr.</h1>
         <p>O craque brasileiro 🇧🇷</p>
     </header>
 
+    <nav>
+        <a href="#carreira">Carreira</a>
+        <a href="#selecao">Seleção</a>
+        <a href="#estilo">Estilo de jogo</a>
+    </nav>
+
     <main>
 
-        <h2>Quem é Neymar?</h2>
+        <section id="carreira">
+            <img src="neymar3.png" class="foto" alt="Neymar no Santos">
 
-        <p>
-            Neymar Jr. é um famoso jogador de futebol brasileiro,
-            conhecido por seus dribles, gols e habilidade com a bola.
-        </p>
-
-        <div class="caixa">
             <h2>🏆 Carreira</h2>
-            <p>
-                Neymar começou sua carreira no Santos e depois
-                passou por grandes clubes do futebol mundial.
-            </p>
-        </div>
 
-        <div class="caixa">
+            <p>
+                Neymar começou sua carreira profissional no Santos,
+                onde ganhou destaque por seus dribles, gols e habilidade.
+                Depois, passou por grandes clubes do futebol mundial.
+            </p>
+        </section>
+
+        <section id="selecao">
+            <img src="neymar2.png" class="foto" alt="Neymar na Seleção Brasileira">
+
             <h2>🇧🇷 Seleção Brasileira</h2>
-            <p>
-                Neymar também representou a Seleção Brasileira
-                em diversas competições.
-            </p>
-        </div>
 
-        <div class="caixa">
-            <h2>⭐ Estilo de jogo</h2>
             <p>
-                Ele é conhecido principalmente pelos seus dribles,
-                criatividade, velocidade e finalizações.
+                Neymar representou a Seleção Brasileira em diversas
+                competições e se tornou um dos principais jogadores
+                da história recente do futebol brasileiro.
             </p>
-        </div>
+        </section>
+
+        <section id="estilo">
+            <img src="neymar1.png" class="foto" alt="Neymar">
+
+            <h2>⭐ Estilo de jogo</h2>
+
+            <div class="caixa">
+                <p>
+                    Neymar é conhecido por sua criatividade, velocidade,
+                    dribles, passes e finalizações. Sua técnica fez dele
+                    um jogador muito reconhecido no futebol mundial.
+                </p>
+            </div>
+        </section>
 
     </main>
+
+    <a href="#topo" class="botao" title="Voltar ao topo">⬆️</a>
 
     <footer>
         <p>⚽ Neymar Jr. | Página criada com HTML e CSS 🇧🇷</p>
