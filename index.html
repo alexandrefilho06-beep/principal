@@ -42,7 +42,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: bold;
         }
 
@@ -83,15 +83,24 @@
             box-shadow: 0 5px 15px #0004;
         }
 
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #0004;
+        }
+
         .caixa {
             background: linear-gradient(135deg, #ffdf00, #f5c900);
             padding: 20px;
-            margin-top: 20px;
             border-radius: 12px;
-        }
-
-        .caixa h2 {
-            color: #002776;
         }
 
         .botao {
@@ -114,7 +123,10 @@
             padding: 20px;
         }
 
-        /* Celular */
+        footer p {
+            margin: 5px;
+        }
+
         @media (max-width: 600px) {
             header h1 {
                 font-size: 32px;
@@ -129,12 +141,12 @@
                 padding: 18px;
             }
 
-            p {
-                font-size: 16px;
+            .galeria {
+                grid-template-columns: 1fr;
             }
 
-            .foto {
-                width: 220px;
+            .galeria img {
+                height: 350px;
             }
         }
     </style>
@@ -151,45 +163,65 @@
         <a href="#carreira">Carreira</a>
         <a href="#selecao">Seleção</a>
         <a href="#estilo">Estilo de jogo</a>
+        <a href="#galeria">Galeria</a>
     </nav>
 
     <main>
 
         <section id="carreira">
-            <img src="neymar3.png" class="foto" alt="Neymar no Santos">
-
             <h2>🏆 Carreira</h2>
 
+            <div class="galeria">
+                <img src="neymar-santos.jpg" alt="Neymar no Santos">
+                <img src="neymar-psg.jpg" alt="Neymar no PSG">
+            </div>
+
             <p>
-                Neymar começou sua carreira profissional no Santos,
+                Neymar Jr. começou sua carreira profissional no Santos,
                 onde ganhou destaque por seus dribles, gols e habilidade.
-                Depois, passou por grandes clubes do futebol mundial.
+                Depois, passou por grandes clubes do futebol mundial,
+                incluindo o Paris Saint-Germain.
             </p>
         </section>
 
         <section id="selecao">
-            <img src="neymar2.png" class="foto" alt="Neymar na Seleção Brasileira">
-
             <h2>🇧🇷 Seleção Brasileira</h2>
+
+            <img src="neymar-selecao.jpg" class="foto"
+                 alt="Neymar com a Seleção Brasileira">
 
             <p>
                 Neymar representou a Seleção Brasileira em diversas
                 competições e se tornou um dos principais jogadores
-                da história recente do futebol brasileiro.
+                brasileiros de sua geração.
             </p>
         </section>
 
         <section id="estilo">
-            <img src="neymar1.png" class="foto" alt="Neymar">
-
             <h2>⭐ Estilo de jogo</h2>
 
             <div class="caixa">
                 <p>
                     Neymar é conhecido por sua criatividade, velocidade,
-                    dribles, passes e finalizações. Sua técnica fez dele
-                    um jogador muito reconhecido no futebol mundial.
+                    dribles, passes e finalizações. Sua técnica e habilidade
+                    fizeram dele um dos jogadores mais conhecidos do futebol.
                 </p>
+            </div>
+
+            <br>
+
+            <div class="galeria">
+                <img src="neymar1.jpg" alt="Neymar Jr.">
+                <img src="neymar2.jpg" alt="Neymar Jr.">
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>📸 Galeria</h2>
+
+            <div class="galeria">
+                <img src="neymar3.jpg" alt="Neymar">
+                <img src="neymar-wikipedia.jpg" alt="Neymar">
             </div>
         </section>
 
@@ -199,6 +231,8 @@
 
     <footer>
         <p>⚽ Neymar Jr. | Página criada com HTML e CSS 🇧🇷</p>
+        <p><strong>Criador: Alexandre dos Santos</strong></p>
+        <p>📞 Contato: (47) 99268-0918</p>
     </footer>
 
 </body>
